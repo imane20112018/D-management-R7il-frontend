@@ -1,62 +1,76 @@
+<!-- src/views/LoginView.vue -->
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-gray-100">
-    <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
-      <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Connexion</h2>
-      <form @submit.prevent="login">
-        <div class="mb-4">
-          <label class="block mb-1 text-sm text-gray-600">Email</label>
+  <div class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+    <div class="card shadow p-4" style="min-width: 400px">
+      <h3 class="text-center mb-4 text-primary">Connexion</h3>
+      <form @submit.prevent="submit">
+        <div class="mb-3">
+          <label for="email" class="form-label">Adresse Email</label>
           <input
-            v-model="form.email"
             type="email"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            id="email"
+            class="form-control"
+            v-model="form.email"
+            placeholder="ex: imane@gmail.com"
             required
           />
         </div>
-        <div class="mb-6">
-          <label class="block mb-1 text-sm text-gray-600">Mot de passe</label>
+        <div class="mb-3">
+          <label for="password" class="form-label">Mot de passe</label>
           <input
-            v-model="form.password"
             type="password"
-            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            id="password"
+            class="form-control"
+            v-model="form.password"
+            placeholder="******"
             required
           />
         </div>
-        <button
-          type="submit"
-          class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg"
-        >
-          Se connecter
-        </button>
+        <div v-if="error" class="alert alert-danger py-1">
+          {{ error }}
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Se connecter</button>
       </form>
+      <div class="text-center mt-3">
+        <small>Pas de compte ? <RouterLink to="/register">Créer un compte</RouterLink></small>
+      </div>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import axios from 'axios'
 
-export default {
-  data() {
-    return {
-      form: {
-        email: '',
-        password: '',
-      },
+const router = useRouter()
+
+const form = ref({
+  email: '',
+  password: '',
+})
+
+const error = ref('')
+
+const submit = async () => {
+  error.value = ''
+  try {
+    const response = await axios.post('http://127.0.0.1:8000/api/login', {
+      email: form.value.email,
+      password: form.value.password,
+    })
+
+    // Stocker l'utilisateur ou token si tu veux
+    localStorage.setItem('user', JSON.stringify(response.data.User))
+
+    // Rediriger vers le tableau de bord
+    router.push('/dashboard')
+  } catch (err) {
+    if (err.response && err.response.status === 401) {
+      error.value = 'Email ou mot de passe incorrect'
+    } else {
+      error.value = 'Erreur lors de la connexion'
     }
-  },
-  methods: {
-    async login() {
-      try {
-        await axios.get('/sanctum/csrf-cookie') // Important
-        const response = await axios.post('/api/login', this.form)
-        alert(response.data.success)
-        console.log('User:', response.data.User)
-        console.log('Token:', response.data.Token)
-        // Redirect or store token
-      } catch (error) {
-        alert(error.response.data.message || 'Erreur de connexion')
-      }
-    },
-  },
+  }
 }
 </script>
