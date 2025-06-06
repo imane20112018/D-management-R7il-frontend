@@ -1,19 +1,18 @@
+// src/router/index.js or main.js
 import { createRouter, createWebHistory } from 'vue-router'
-
-// Importer les pages Register et Login
-import RegisterView from '../views/RegisterView.vue'
 import LoginView from '../views/LoginView.vue'
+import DashboardView from '../views/DashboardView.vue'
+import RegisterView from '../views/RegisterView.vue'
 
-// Définir les routes accessibles dans l'app
 const routes = [
-  { path: '/', redirect: '/login' }, // Redirection par défaut
-  { path: '/register', component: RegisterView }, // Page d'inscription
-  { path: '/login', component: LoginView }, // Page de connexion
+  { path: '/', redirect: '/login' },
+  { path: '/login', component: LoginView },
+  { path: '/dashboard', component: DashboardView },
+  { path: '/register', component: RegisterView },
 ]
 
-// Créer et exporter le routeur
 const router = createRouter({
-  history: createWebHistory(), // Utiliser le mode HTML5 (sans hash #)
+  history: createWebHistory(),
   routes,
 })
 
