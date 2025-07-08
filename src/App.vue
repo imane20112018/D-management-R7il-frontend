@@ -16,12 +16,22 @@ export default {
         '/presentation',
         '/transporteur',
         '/contact',
-        '/login_register'
       ]
 
-      return mainLayoutRoutes.includes(this.$route.path)
-        ? MainLayout
-        : DashboardLayout
+      const dashboardLayoutRoutes = [
+        '/dashboard_client',
+        '/login_client'
+      ]
+
+      // Vérifie la route actuelle et retourne le layout approprié
+      if (mainLayoutRoutes.includes(this.$route.path)) {
+        return 'MainLayout'
+      } else if (dashboardLayoutRoutes.includes(this.$route.path)) {
+        return 'DashboardLayout'
+      }
+
+      // Layout par défaut si aucun ne correspond
+      return 'MainLayout'
     }
   },
   components: {
