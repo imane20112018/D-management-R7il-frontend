@@ -172,6 +172,7 @@ export default {
 }
 </script>
 
-<style scoped>
-/* Ajoutez ici les styles spécifiques au header si nécessaire */
+<style>
+@import '@/assets/template/css/global.css';
 </style>
+
