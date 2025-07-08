@@ -12,22 +12,24 @@
 
   <script type="module" src="/src/main.js"></script>
 
-  <!-- Charger les scripts UNIQUEMENT pour contact/presentation/transporteur -->
   <script>
-    const allowedRoutes = ['/','/contact', '/presentation', '/transporteur'];
-    if (allowedRoutes.includes(window.location.pathname)) {
+    // Single declaration of allowedRoutes at the beginning
+    const allowedRoutes = {
+      loadScripts: ['/', '/contact', '/presentation', '/transporteur'],
+      initDatepicker: ['/contact', '/presentation', '/transporteur']
+    };
+
+    // Load scripts conditionally
+    if (allowedRoutes.loadScripts.includes(window.location.pathname)) {
       document.write(`
         <script src="/template/js/plugins.min.js" defer><\/script>
         <script src="/template/js/functions.bundle.js" defer><\/script>
         <script src="/template/js/components/datepicker.js" defer><\/script>
       `);
     }
-  </script>
 
-  <!-- Initialiser le datepicker si route concernée -->
-  <script>
-    const allowedRoutes = ['/contact', '/presentation', '/transporteur'];
-    if (allowedRoutes.includes(window.location.pathname)) {
+    // Initialize datepicker conditionally
+    if (allowedRoutes.initDatepicker.includes(window.location.pathname)) {
       setTimeout(() => {
         if (window.jQuery) {
           jQuery('.home-date').datepicker({
