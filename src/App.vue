@@ -11,16 +11,27 @@ import DashboardLayout from '@/layout/template/DashboardLayout.vue'
 export default {
   computed: {
     layout() {
-      const noLayoutRoutes = ['/login', '/register', '/login_register']
-      const dashboardRoutes = ['/dashboard']
+      const mainLayoutRoutes = [
+        '/',
+        '/presentation',
+        '/transporteur',
+        '/contact',
+      ]
 
-      if (noLayoutRoutes.includes(this.$route.path)) {
-        return 'div'
-      } else if (dashboardRoutes.includes(this.$route.path)) {
-        return DashboardLayout
-      } else {
-        return MainLayout
+      const dashboardLayoutRoutes = [
+        '/dashboard_client',
+        '/login_client'
+      ]
+
+      // Vérifie la route actuelle et retourne le layout approprié
+      if (mainLayoutRoutes.includes(this.$route.path)) {
+        return 'MainLayout'
+      } else if (dashboardLayoutRoutes.includes(this.$route.path)) {
+        return 'DashboardLayout'
       }
+
+      // Layout par défaut si aucun ne correspond
+      return 'MainLayout'
     }
   },
   components: {

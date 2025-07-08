@@ -1,12 +1,9 @@
 <template>
-  <div>
-    <AppHeader />
-      <router-view />
+  <div id="wrapper">
+      <slot />
   </div>
 </template>
-
 <script setup>
-import AppHeader from '@/components/DashboardC/AppHeader.vue'
 import { onMounted } from 'vue'
 import { usePhoenixNavbarLayout } from '@/composables/usePhoenixNavbarLayout'
 
