@@ -10,13 +10,13 @@
 
             <img
               class="logo-default"
-              srcset="/template\images\33.png"
+              srcset="/template/images/33.png"
               :style="{ color: 'white' }"
               alt="Logo R7il"
             />
             <img
               class="logo-dark"
-              srcset="/template\images\33.png"
+              srcset="/template/images/33.png"
               :style="{ color: 'white' }"
               Z
               alt="Logo R7il"

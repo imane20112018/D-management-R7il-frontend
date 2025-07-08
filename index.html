@@ -1,41 +1,42 @@
 <!doctype html>
 <html dir="ltr" lang="en-US">
-
 <head>
-    <meta charset="UTF-8" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>R7il</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta http-equiv="x-ua-compatible" content="IE=edge">
-    <meta name="author" content="">
-    <meta name="description" content="">
-
-
+  <meta charset="UTF-8" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>R7il</title>
 </head>
 
 <body class="stretched">
+  <div id="app"></div>
 
-    <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
 
-    <script type="module" src="/src/main.js"></script>
+  <!-- Charger les scripts UNIQUEMENT pour contact/presentation/transporteur -->
+  <script>
+    const allowedRoutes = ['/','/contact', '/presentation', '/transporteur'];
+    if (allowedRoutes.includes(window.location.pathname)) {
+      document.write(`
+        <script src="/template/js/plugins.min.js" defer><\/script>
+        <script src="/template/js/functions.bundle.js" defer><\/script>
+        <script src="/template/js/components/datepicker.js" defer><\/script>
+      `);
+    }
+  </script>
 
-    <script src="/template/js/plugins.min.js" defer></script>
-    <script src="/template/js/functions.bundle.js" defer></script>
-    <script src="/template/js/components/datepicker.js" defer></script>
-
-    <!-- public/index.html -->
-
-
-
-
-    <script>
-        jQuery('.home-date').datepicker({
+  <!-- Initialiser le datepicker si route concernée -->
+  <script>
+    const allowedRoutes = ['/contact', '/presentation', '/transporteur'];
+    if (allowedRoutes.includes(window.location.pathname)) {
+      setTimeout(() => {
+        if (window.jQuery) {
+          jQuery('.home-date').datepicker({
             autoclose: true,
             startDate: "today",
-        });
-    </script>
+          });
+        }
+      }, 100);
+    }
+  </script>
 </body>
-
 </html>

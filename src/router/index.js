@@ -1,10 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-// Dashboard layout
-import DashboardLayout from '@/layout/template/DashboardLayout.vue'
-
-// Dashboard children views
-import DashboardHome from '@/views/DashboardC/Dashboard.vue' // ou DashboardHome.vue
 
 // Template views
 import ContactPage from '@/views/template/contact.vue'
