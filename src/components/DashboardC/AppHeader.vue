@@ -8,12 +8,19 @@
             <li class="nav-item">
               <!-- parent pages-->
               <div class="nav-item-wrapper">
-                <a class="nav-link label-1" href="pages/starter.html" role="button" data-bs-toggle=""
-                  aria-expanded="false">
+                <a
+                  class="nav-link label-1"
+                  href="pages/starter.html"
+                  role="button"
+                  data-bs-toggle=""
+                  aria-expanded="false"
+                >
                   <div class="d-flex align-items-center">
                     <span class="nav-link-icon"><span data-feather="pie-chart"></span></span>
 
-                    <span class="nav-link-text-wrapper"><span class="nav-link-text">Dashboard</span></span>
+                    <span class="nav-link-text-wrapper"
+                      ><span class="nav-link-text">Dashboard</span></span
+                    >
                   </div>
                 </a>
               </div>
@@ -27,8 +34,14 @@
 
               <!-- parent pages-->
               <div class="nav-item-wrapper">
-                <a class="nav-link dropdown-indicator label-1" href="#nv-authentication" role="button"
-                  data-bs-toggle="collapse" aria-expanded="false" aria-controls="nv-authentication">
+                <a
+                  class="nav-link dropdown-indicator label-1"
+                  href="#nv-authentication"
+                  role="button"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls="nv-authentication"
+                >
                   <div class="d-flex align-items-center">
                     <div class="dropdown-indicator-icon-wrapper">
                       <span class="fas fa-caret-right dropdown-indicator-icon"></span>
@@ -38,7 +51,11 @@
                   </div>
                 </a>
                 <div class="parent-wrapper label-1">
-                  <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="nv-authentication">
+                  <ul
+                    class="nav collapse parent"
+                    data-bs-parent="#navbarVerticalCollapse"
+                    id="nv-authentication"
+                  >
                     <li class="collapsed-nav-item-title d-none">Authentication</li>
 
                     <li class="nav-item">
@@ -100,7 +117,8 @@
       </div>
       <div class="navbar-vertical-footer">
         <button
-          class="btn navbar-vertical-toggle border-0 fw-semibold w-100 white-space-nowrap d-flex align-items-center">
+          class="btn navbar-vertical-toggle border-0 fw-semibold w-100 white-space-nowrap d-flex align-items-center"
+        >
           <span class="uil uil-left-arrow-to-left fs-8"></span>
           <span class="uil uil-arrow-from-right fs-8"></span>
           <span class="navbar-vertical-footer-text ms-2">Collapsed View</span>
@@ -110,16 +128,22 @@
     <nav class="navbar navbar-top fixed-top navbar-expand" id="navbarDefault" style="display: none">
       <div class="collapse navbar-collapse justify-content-between">
         <div class="navbar-logo">
-          <button class="btn navbar-toggler navbar-toggler-humburger-icon hover-bg-transparent" type="button"
-            data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse"
-            aria-expanded="false" aria-label="Toggle Navigation">
+          <button
+            class="btn navbar-toggler navbar-toggler-humburger-icon hover-bg-transparent"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarVerticalCollapse"
+            aria-controls="navbarVerticalCollapse"
+            aria-expanded="false"
+            aria-label="Toggle Navigation"
+          >
             <span class="navbar-toggle-icon"><span class="toggle-line"></span></span>
           </button>
           <a class="navbar-brand me-1 me-sm-3" href="index-1.html">
             <div class="d-flex align-items-center">
               <div class="d-flex align-items-center">
-                <img src="/assets/img/icons/logo.png" alt="phoenix" width="27" />
-                <h5 class="logo-text ms-2 d-none d-sm-block">phoenix</h5>
+                <img src="/src/assets/DashboardC/assets/img/LOGO.jpg" alt="phoenix" width="100" />
+                <h5 class="logo-text ms-2 d-none d-sm-block"></h5>
               </div>
             </div>
           </a>
@@ -128,30 +152,56 @@
         <ul class="navbar-nav navbar-nav-icons flex-row">
           <li class="nav-item">
             <div class="theme-control-toggle fa-icon-wait px-2">
-              <input class="form-check-input ms-0 theme-control-toggle-input" type="checkbox"
-                data-theme-control="phoenixTheme" value="dark" id="themeControlToggle" />
-              <label class="mb-0 theme-control-toggle-label theme-control-toggle-light" for="themeControlToggle"
-                data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Switch theme"
-                style="height: 32px; width: 32px">
+              <input
+                class="form-check-input ms-0 theme-control-toggle-input"
+                type="checkbox"
+                data-theme-control="phoenixTheme"
+                value="dark"
+                id="themeControlToggle"
+              />
+              <label
+                class="mb-0 theme-control-toggle-label theme-control-toggle-light"
+                for="themeControlToggle"
+                data-bs-toggle="tooltip"
+                data-bs-placement="left"
+                data-bs-title="Switch theme"
+                style="height: 32px; width: 32px"
+              >
                 <span class="icon" data-feather="moon"></span>
               </label>
-              <label class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggle"
-                data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Switch theme"
-                style="height: 32px; width: 32px">
+              <label
+                class="mb-0 theme-control-toggle-label theme-control-toggle-dark"
+                for="themeControlToggle"
+                data-bs-toggle="tooltip"
+                data-bs-placement="left"
+                data-bs-title="Switch theme"
+                style="height: 32px; width: 32px"
+              >
                 <span class="icon" data-feather="sun"></span>
               </label>
             </div>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" style="min-width: 2.25rem" role="button" data-bs-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">
-              <span class="d-block" style="height: 20px; width: 20px"><span data-feather="bell"
-                  style="height: 20px; width: 20px"></span></span>
+            <a
+              class="nav-link"
+              href="#"
+              style="min-width: 2.25rem"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-bs-auto-close="outside"
+            >
+              <span class="d-block" style="height: 20px; width: 20px"
+                ><span data-feather="bell" style="height: 20px; width: 20px"></span
+              ></span>
             </a>
             <div
               class="dropdown-menu dropdown-menu-end notification-dropdown-menu py-0 shadow border navbar-dropdown-caret"
-              id="navbarDropdownNotfication" aria-labelledby="navbarDropdownNotfication">
+              id="navbarDropdownNotfication"
+              aria-labelledby="navbarDropdownNotfication"
+            >
               <div class="card position-relative border-0">
                 <div class="card-header p-2">
                   <div class="d-flex justify-content-between">
@@ -163,18 +213,28 @@
                 </div>
                 <div class="card-body p-0">
                   <div class="scrollbar-overlay" style="height: 27rem">
-                    <div class="px-2 px-sm-3 py-3 notification-card position-relative read border-bottom">
-                      <div class="d-flex align-items-center justify-content-between position-relative">
+                    <div
+                      class="px-2 px-sm-3 py-3 notification-card position-relative read border-bottom"
+                    >
+                      <div
+                        class="d-flex align-items-center justify-content-between position-relative"
+                      >
                         <div class="d-flex">
                           <div class="avatar avatar-m status-online me-3">
-                            <img class="rounded-circle" src="/assets/img/team/40x40/30.webp" alt="" />
+                            <img
+                              class="rounded-circle"
+                              src="/assets/img/team/40x40/30.webp"
+                              alt=""
+                            />
                           </div>
                           <div class="flex-1 me-sm-3">
                             <h4 class="fs-9 text-body-emphasis">Jessie Samson</h4>
                             <p class="fs-9 text-body-highlight mb-2 mb-sm-3 fw-normal">
                               <span class="me-1 fs-10">💬</span>
                               Mentioned you in a comment.
-                              <span class="ms-2 text-body-quaternary text-opacity-75 fw-bold fs-10">10m</span>
+                              <span class="ms-2 text-body-quaternary text-opacity-75 fw-bold fs-10"
+                                >10m</span
+                              >
                             </p>
                             <p class="text-body-secondary fs-9 mb-0">
                               <span class="me-1 fas fa-clock"></span>
@@ -184,9 +244,15 @@
                           </div>
                         </div>
                         <div class="dropdown notification-dropdown">
-                          <button class="btn fs-10 btn-sm dropdown-toggle dropdown-caret-none transition-none"
-                            type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true"
-                            aria-expanded="false" data-bs-reference="parent">
+                          <button
+                            class="btn fs-10 btn-sm dropdown-toggle dropdown-caret-none transition-none"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            data-boundary="window"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            data-bs-reference="parent"
+                          >
                             <span class="fas fa-ellipsis-h fs-10 text-body"></span>
                           </button>
                           <div class="dropdown-menu py-2">
@@ -207,14 +273,24 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link lh-1 pe-0" id="navbarDropdownUser" href="#!" role="button" data-bs-toggle="dropdown"
-              data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
+            <a
+              class="nav-link lh-1 pe-0"
+              id="navbarDropdownUser"
+              href="#!"
+              role="button"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
               <div class="avatar avatar-l">
                 <img class="rounded-circle" src="/assets/img/team/40x40/57.webp" alt="" />
               </div>
             </a>
-            <div class="dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 dropdown-profile shadow border"
-              aria-labelledby="navbarDropdownUser">
+            <div
+              class="dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 dropdown-profile shadow border"
+              aria-labelledby="navbarDropdownUser"
+            >
               <div class="card position-relative border-0">
                 <div class="card-body p-0">
                   <div class="text-center pt-4 pb-3">
@@ -224,8 +300,12 @@
                     <h6 class="mt-2 text-body-emphasis">Jerry Seinfield</h6>
                   </div>
                   <div class="mb-3 mx-3">
-                    <input class="form-control form-control-sm" id="statusUpdateInput" type="text"
-                      placeholder="Update your status" />
+                    <input
+                      class="form-control form-control-sm"
+                      id="statusUpdateInput"
+                      type="text"
+                      placeholder="Update your status"
+                    />
                   </div>
                 </div>
                 <div class="overflow-auto scrollbar" style="height: 10rem">
@@ -320,8 +400,6 @@
         </div>
       </footer>
     </div>
-
-
   </main>
 </template>
 
