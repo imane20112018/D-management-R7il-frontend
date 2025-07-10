@@ -59,7 +59,7 @@
                     <li class="collapsed-nav-item-title d-none">Authentication</li>
 
                     <li class="nav-item">
-                      <a class="nav-link" href="pages/authentication/simple/sign-in.html">
+                      <a class="nav-link" href="../../views/DashboardC/Login.vue">
                         <div class="d-flex align-items-center">
                           <span class="nav-link-text">Sign in</span>
                         </div>
