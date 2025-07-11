@@ -59,39 +59,39 @@
                     <li class="collapsed-nav-item-title d-none">Authentication</li>
 
                     <li class="nav-item">
-                      <a class="nav-link" href="../../views/DashboardC/Login.vue">
+                      <router-link class="nav-link" to="/login_client">
                         <div class="d-flex align-items-center">
-                          <span class="nav-link-text">Sign in</span>
+                          <span class="nav-link-text">Se connecter</span>
                         </div>
-                      </a>
+                      </router-link>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="pages/authentication/simple/sign-up.html">
+                      <router-link class="nav-link" to="/register_client">
                         <div class="d-flex align-items-center">
-                          <span class="nav-link-text">Sign up</span>
+                          <span class="nav-link-text">S'inscrire</span>
                         </div>
-                      </a>
+                      </router-link>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="pages/authentication/simple/sign-out.html">
+                      <router-link class="nav-link" to="/logout">
                         <div class="d-flex align-items-center">
-                          <span class="nav-link-text">Sign out</span>
+                          <span class="nav-link-text">Se deconnecter</span>
                         </div>
-                      </a>
+                      </router-link>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="pages/authentication/simple/forgot-password.html">
+                      <router-link class="nav-link" to="">
                         <div class="d-flex align-items-center">
-                          <span class="nav-link-text">Forgot password</span>
+                          <span class="nav-link-text">mot de passe oublié</span>
                         </div>
-                      </a>
+                      </router-link>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="pages/authentication/simple/reset-password.html">
+                      <router-link class="nav-link" to="/reset_password">
                         <div class="d-flex align-items-center">
-                          <span class="nav-link-text">Reset password</span>
+                          <span class="nav-link-text">Réinitialiser le mot de passe</span>
                         </div>
-                      </a>
+                      </router-link>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="pages/authentication/simple/lock-screen.html">
@@ -404,6 +404,8 @@
 </template>
 
 <script>
+import { RouterLink } from 'vue-router'
+
 export default {
   name: 'DashboardClient',
 }
