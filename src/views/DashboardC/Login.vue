@@ -22,8 +22,8 @@
                   <div
                     class="position-relative px-4 px-lg-7 pt-7 pb-7 pb-sm-5 text-center text-md-start pb-lg-7 pb-md-7"
                   >
-                    <h3 class="mb-3 text-body-emphasis fs-7">R7IL.MA</h3>
-                    <p class="text-body-tertiary">Facilitez vos trajets avec R7il.ma !</p>
+                    <h3 class="mb-3 text-body-emphasis fs-7">Authentification R7il.ma</h3>
+                    <p class="text-body-tertiary">Facilitez vos trajets avec Nous</p>
                     <ul class="list-unstyled mb-0 w-max-content w-md-auto">
                       <li class="d-flex align-items-center">
                         <span class="uil uil-check-circle text-success me-2"></span
@@ -42,7 +42,7 @@
                   <div class="position-relative z-n1 mb-6 d-none d-md-block text-center mt-md-15">
                     <img
                       class="auth-title-box-img d-dark-none"
-                      src="../../../assets/img/spot-illustrations/auth.png"
+                      src="../../assets/DashboardC/assets/img/spot-illustrations/voiture2.png"
                       alt=""
                     /><img
                       class="auth-title-box-img d-light-none"
@@ -54,15 +54,12 @@
                 <div class="col mx-auto">
                   <div class="auth-form-box">
                     <div class="text-center mb-7">
-                      <a
-                        class="d-flex flex-center text-decoration-none mb-4"
-                        href="../../../index-1.html"
-                      >
+                      <a class="d-flex flex-center text-decoration-none mb-4" href="/">
                         <div class="d-flex align-items-center fw-bolder fs-3 d-inline-block">
                           <img
-                            src="../../assets/DashboardC/assets/img/LOGO.jpg"
-                            alt="phoenix"
-                            width="100"
+                            src="../../assets/DashboardC/assets/img/favicons/image.png"
+                            alt="R7il.ma"
+                            width="50"
                           />
                         </div>
                       </a>
@@ -70,7 +67,8 @@
                       <p class="text-body-tertiary">Accédez à votre compte</p>
                     </div>
                     <button class="btn btn-phoenix-secondary w-100 mb-3">
-                      <span class="fab fa-google text-danger me-2 fs-9"></span>Sign in with google</button
+                      <span class="fab fa-google text-danger me-2 fs-9"></span> Se connecter avec
+                      google</button
                     ><button class="btn btn-phoenix-secondary w-100">
                       <span class="fab fa-facebook text-primary me-2 fs-9"></span> Se connecter avec
                       Facebook
@@ -120,19 +118,21 @@
                             type="checkbox"
                             checked="checked"
                           /><label class="form-check-label mb-0" for="basic-checkbox"
-                            >Remember me</label
+                            >Se souvenir de moi</label
                           >
                         </div>
                       </div>
                       <div class="col-auto">
-                        <a class="fs-9 fw-semibold" href="forgot-password.html"
-                          >Se souvenir de moi</a
+                        <router-link class="fs-9 fw-semibold" to="/forgot_password"
+                          >Mot de passe Oublié</router-link
                         >
                       </div>
                     </div>
                     <button class="btn btn-primary w-100 mb-3">Se connecter</button>
                     <div class="text-center">
-                      <a class="fs-9 fw-bold" href="sign-up.html">Créer un compte</a>
+                      <router-link class="fs-9 fw-bold" to="/register_client"
+                        >Créer un compte</router-link
+                      >
                     </div>
                   </div>
                 </div>
