@@ -22,30 +22,27 @@
                   <div
                     class="position-relative px-4 px-lg-7 pt-7 pb-7 pb-sm-5 text-center text-md-start pb-lg-7 card-sign-up"
                   >
-                    <h3 class="mb-3 text-body-emphasis fs-7">Phoenix Authentication</h3>
-                    <p class="text-body-tertiary">
-                      Give yourself some hassle-free development process with the uniqueness of
-                      Phoenix!
-                    </p>
+                    <h3 class="mb-3 text-body-emphasis fs-7">Authentification R7il.ma</h3>
+                    <p class="text-body-tertiary">Facilitez vos trajets avec Nous !</p>
                     <ul class="list-unstyled mb-0 w-max-content w-md-auto">
                       <li class="d-flex align-items-center">
                         <span class="uil uil-check-circle text-success me-2"></span
-                        ><span class="text-body-tertiary fw-semibold">Fast</span>
+                        ><span class="text-body-tertiary fw-semibold">Rapide</span>
                       </li>
                       <li class="d-flex align-items-center">
                         <span class="uil uil-check-circle text-success me-2"></span
-                        ><span class="text-body-tertiary fw-semibold">Simple</span>
+                        ><span class="text-body-tertiary fw-semibold">Accessible</span>
                       </li>
                       <li class="d-flex align-items-center">
                         <span class="uil uil-check-circle text-success me-2"></span
-                        ><span class="text-body-tertiary fw-semibold">Responsive</span>
+                        ><span class="text-body-tertiary fw-semibold">Fiable</span>
                       </li>
                     </ul>
                   </div>
                   <div class="position-relative z-n1 mb-6 d-none d-md-block text-center mt-md-15">
                     <img
                       class="auth-title-box-img d-dark-none"
-                      src="../../../assets/img/spot-illustrations/auth.png"
+                      src="../../assets/DashboardC/assets/img/spot-illustrations/voiture2.png"
                       alt=""
                     /><img
                       class="auth-title-box-img d-light-none"
@@ -57,34 +54,36 @@
                 <div class="col mx-auto">
                   <div class="auth-form-box">
                     <div class="text-center mb-7">
-                      <a
-                        class="d-flex flex-center text-decoration-none mb-4"
-                        href="../../../index-1.html"
-                      >
+                      <a class="d-flex flex-center text-decoration-none mb-4" href="/">
                         <div class="d-flex align-items-center fw-bolder fs-3 d-inline-block">
-                          <img src="../../../assets/img/icons/logo.png" alt="phoenix" width="58" />
+                          <img
+                            src="../../assets/DashboardC/assets/img//favicons/image.png"
+                            alt="phoenix"
+                            width="50"
+                          />
                         </div>
                       </a>
-                      <h3 class="text-body-highlight">Sign Up</h3>
-                      <p class="text-body-tertiary">Create your account today</p>
+                      <h3 class="text-body-highlight">S'inscrire</h3>
+                      <p class="text-body-tertiary">Créez votre compte aujourd'hui</p>
                     </div>
                     <button class="btn btn-phoenix-secondary w-100 mb-3">
-                      <span class="fab fa-google text-danger me-2 fs-9"></span>Sign up with google</button
+                      <span class="fab fa-google text-danger me-2 fs-9"></span>Inscrivez-vous avec
+                      google</button
                     ><button class="btn btn-phoenix-secondary w-100">
-                      <span class="fab fa-facebook text-primary me-2 fs-9"></span>Sign up with
-                      facebook
+                      <span class="fab fa-facebook text-primary me-2 fs-9"></span>Inscrivez-vous
+                      avec facebook
                     </button>
                     <div class="position-relative mt-4">
                       <hr class="bg-body-secondary" />
-                      <div class="divider-content-center bg-body-emphasis">or use email</div>
+                      <div class="divider-content-center bg-body-emphasis">ou utilisez email</div>
                     </div>
                     <form>
                       <div class="mb-3 text-start">
-                        <label class="form-label" for="name">Name</label
+                        <label class="form-label" for="name">Nom Complet</label
                         ><input class="form-control" id="name" type="text" placeholder="Name" />
                       </div>
                       <div class="mb-3 text-start">
-                        <label class="form-label" for="email">Email address</label
+                        <label class="form-label" for="email">Adresse e-mail</label
                         ><input
                           class="form-control"
                           id="email"
@@ -94,7 +93,7 @@
                       </div>
                       <div class="row g-3 mb-3">
                         <div class="col-sm-6">
-                          <label class="form-label" for="password">Password</label>
+                          <label class="form-label" for="password">Mot de passe</label>
                           <div class="position-relative" data-password="data-password">
                             <input
                               class="form-control form-icon-input pe-6"
@@ -112,7 +111,9 @@
                           </div>
                         </div>
                         <div class="col-sm-6">
-                          <label class="form-label" for="confirmPassword">Confirm Password</label>
+                          <label class="form-label" for="confirmPassword"
+                            >Confirmez le mot de passe</label
+                          >
                           <div class="position-relative" data-password="data-password">
                             <input
                               class="form-control form-icon-input pe-6"
@@ -134,15 +135,15 @@
                         <input class="form-check-input" id="termsService" type="checkbox" /><label
                           class="form-label fs-9 text-transform-none"
                           for="termsService"
-                          >I accept the <a href="#!">terms </a>and
-                          <a href="#!">privacy policy</a></label
+                          >J'accepte les<a href="#!">conditions générales </a>et
+                          <a href="#!">la politique de confidentialité</a></label
                         >
                       </div>
-                      <button class="btn btn-primary w-100 mb-3">Sign up</button>
+                      <button class="btn btn-primary w-100 mb-3">S'inscrire</button>
                       <div class="text-center">
-                        <a class="fs-9 fw-bold" href="sign-in.html"
-                          >Sign in to an existing account</a
-                        >
+                        <router-link class="fs-9 fw-bold" to="/login_client"
+                          >Connectez-vous à un compte existant
+                        </router-link>
                       </div>
                     </form>
                   </div>
