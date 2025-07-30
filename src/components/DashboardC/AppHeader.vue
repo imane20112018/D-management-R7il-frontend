@@ -21,21 +21,18 @@
 
 
 
-            <li class="nav-item">
-              <!-- label-->
-              <p class="navbar-vertical-label">Pages</p>
-              <hr class="navbar-vertical-line" />
-            <li class="nav-item">
-              <!-- parent pages-->
-              <div class="nav-item-wrapper">
-                <a class="nav-link label-1" href="/" role="button">
-                  <div class="d-flex align-items-center">
-                    <span class="nav-link-icon"><span data-feather="home"></span></span>
-                    <span class="nav-link-text-wrapper"><span class="nav-link-text">Accéder au site</span></span>
-                  </div>
-                </a>
-              </div>
-            </li>
+<li class="nav-item">
+  <!-- parent pages -->
+  <div class="nav-item-wrapper">
+    <a class="nav-link label-1" href="/" role="button">
+      <div class="d-flex align-items-center">
+        <span class="nav-link-icon"><span data-feather="home"></span></span>
+        <span class="nav-link-text-wrapper"><span class="nav-link-text">Accéder au site</span></span>
+      </div>
+    </a>
+  </div>
+</li>
+
 
             <li v-if="user && user.type === 'client'" class="nav-item">
               <div class="nav-item-wrapper">
@@ -71,10 +68,6 @@
     </a>
   </div>
 </li>
-
-
-            </li>
-
 
 
           </ul>
