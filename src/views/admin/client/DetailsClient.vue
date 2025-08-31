@@ -1,5 +1,4 @@
 <template>
-  <AppHeader>
     <main class="main" id="top">
       <div class="mb-9">
         <div class="row align-items-center justify-content-between g-3 mb-4">
@@ -1169,7 +1168,6 @@
         </div>
       </div>
     </main>
-  </AppHeader>
 </template>
 
 <script setup>

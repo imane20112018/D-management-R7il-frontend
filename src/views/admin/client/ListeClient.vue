@@ -1,5 +1,4 @@
 <template>
-  <AppHeader>
     <main class="main" id="top">
       <nav class="mb-3" aria-label="breadcrumb">
         <ol class="breadcrumb mb-0">
@@ -192,7 +191,6 @@
         </div>
       </div>
     </main>
-  </AppHeader>
 </template>
 <script setup>
 import { ref, onMounted } from 'vue'
